@@ -1,0 +1,118 @@
+.home {
+	main {
+		background: url("../images/bg.jpg");
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		position: relative;
+		.overlay {
+			position: absolute; /* Sit on top of the page content */
+			display: block; /* Hidden by default */
+			width: 100%; /* Full width (cover the whole page) */
+			height: 100%; /* Full height (cover the whole page) */
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #010016; /* Black background with opacity */
+			opacity: 0.9;
+			z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+		}
+		h2 {
+			margin: 0;
+			font-weight: 900;
+			font-size: 4rem;
+			color: $second-color;
+			text-align: center;
+			z-index: 2;
+			span {
+				color: $main-color;
+			}
+		}
+		p {
+			$margin: 10px;
+			margin-top: $margin;
+			&:first-of-type {
+				color: $main-color;
+				letter-spacing: 2px;
+				font-weight: 600;
+			}
+			&:nth-of-type(2) {
+				color: $second-color;
+				width: 50%;
+				text-align: center;
+			}
+			&:last-of-type {
+				font-weight: 500;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: $forth-color;
+			background: $main-color;
+			padding: 15px 30px;
+			margin-top: 20px;
+			font-weight: 600;
+			border-radius: 5px;
+			transition: $transition-duration;
+			&:hover {
+				background: $second-color;
+				color: $main-color;
+			}
+		}
+	}
+	>.club-goals {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 100%;
+			h3 {
+				font-size: 2.5rem;
+				font-weight: 800;
+				color: $main-color;
+				margin-bottom: 20px;
+			}
+			text-transform: uppercase;
+			p {
+				font-size: 1.5rem;
+				text-align: center;
+				font-weight: 600;
+				width: 70%;
+				margin-bottom: 20px;
+				color: $second-color;
+				text-transform: uppercase;
+			}
+			.links {
+				display: flex;
+				flex-direction: column;
+				a {
+					text-decoration: none;
+					color: $second-color;
+					font-size: 1.2rem;
+					font-weight: 500;
+					text-align: center;
+					border: 2px solid $second-color;
+					padding: 7px 15px;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					transition: $transition-duration;
+					text-transform: uppercase;
+					&:hover {
+						background: $main-color;
+						border-color: $main-color;
+						color: $forth-color;
+					}
+				}
+			}
+		}
+	}
+}

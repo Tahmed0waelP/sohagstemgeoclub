@@ -1,0 +1,59 @@
+header {
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: $transition-duration;
+	z-index: 3;
+	background: transparent;
+	.container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		.brand {
+			width: 50%;
+			display: flex;
+			align-items: center;
+			img {
+				width: 80px;
+			}
+			h1 {
+				margin-left: 10px;
+				font-size: 1.6rem;
+				color: $second-color;
+				flex: 1;
+				span {
+					color: $main-color;
+				}
+			}
+		}
+		nav {
+			flex: 1;
+			ul {
+				display: flex;
+				flex-direction: row;
+				list-style: none;
+				justify-content: flex-end;
+				align-items: center;
+				li {
+					color: $second-color;
+					margin-right: 3%;
+					margin-left: 3%;
+					a {
+						color: $forth-color;
+						font-weight: 700;
+						font-size: 18px;
+						text-decoration: none;
+						transition: $transition-duration;
+						&:hover, &.active {
+							color: $main-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

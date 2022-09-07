@@ -1,0 +1,107 @@
+footer {
+	font-size: 1.2rem;
+	background: $second-color;
+	display: flex;
+	flex-direction: column;
+	color: $forth-color;
+	align-items: center;
+	padding-top: 2.5vh;
+	img {
+		width: 150px;
+		margin-bottom: 15px;
+	}
+	ul {
+		margin-bottom: 15px;
+		display: flex;
+		flex-direction: row;
+		list-style: none;
+		li {
+			margin-right: 15px;
+			margin-left: 15px;
+			position: relative;
+			&:not(:last-of-type) {
+				&::after {
+					content: "";
+					width: 2px;
+					height: 100%;
+					position: absolute;
+					background: $forth-color;
+					left: calc(100% + 15px);
+				}
+			}
+			a {
+				color: $forth-color;
+				text-decoration: none;
+				font-weight: 600;
+				transition: $transition-duration;
+				&:hover, &.active {
+					color: $main-color;
+				}
+			}
+		}
+	}
+	.contact {
+		display: flex;
+		margin-bottom: 15px;
+		.item {
+			margin-left: 25px;
+			margin-right: 25px;
+			text-decoration: none;
+			color: $forth-color;
+			i {
+				color: $main-color;
+				background: rgba(103, 181, 57, 0.3);
+				width: 35px;
+				height: 35px;
+				border-radius: 35px;
+				text-align: center;
+				padding-top: 7px;
+			}
+			transition: $transition-duration;
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+	.copyright {
+		background: $third-color;
+		width: 100%;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		.container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.follow-us {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				span {
+					margin-right: 10px;
+				}
+				a {
+					text-decoration: none;
+					color: $forth-color;
+					margin-right: 2px;
+					margin-left: 2px;
+					transition: $transition-duration;
+					i {
+						border: 1px solid $forth-color;
+						width: 35px;
+						height: 35px;
+						border-radius: 35px;
+						text-align: center;
+						padding-top: 7px;
+						transition: $transition-duration;
+					}
+					&:hover {
+						color: $third-color;
+						i {
+							background: $forth-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

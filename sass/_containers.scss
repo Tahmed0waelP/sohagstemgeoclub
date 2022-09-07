@@ -1,0 +1,24 @@
+$container: (
+  576px: 540px,
+  768px: 720px,
+  992px: 960px,
+  1200px: 1140px,
+  1400px: 1320px
+);
+
+.container {
+	width: 100%;
+	$padding-x: 20px;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@each $screen, $width in $container {
+	@media (min-width: $screen) {
+		.container {
+			width: $width;
+		}
+	}
+}
